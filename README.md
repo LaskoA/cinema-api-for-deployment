@@ -10,7 +10,7 @@ cd cinema-api-for-deployment
 
 Virtual environment install for Windows:
   - python3 -m venv venv
-  - source venv/bin/activate
+  - venv\Scripts\activate
   - pip install -r requirements.txt
   
 Virtual environment install for Mac:
@@ -23,6 +23,9 @@ set DB_NAME=<your db name>
 set DB_USER=<your db user>
 set DB_PASSWORD=<your db password>
 set SECRET_KEY=<your secret key> 
+
+python manage.py makemigrations
+python manage.py migrate
 python manage.py runserver
 ```
 ## Run with docker
